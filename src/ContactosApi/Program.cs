@@ -1,3 +1,6 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -39,7 +42,28 @@ app.MapGet("/weatherforecast", () =>
 app.Run();
 
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+/*record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+}*/
+
+record WeatherForecast
+{
+    [JsonPropertyName("date")]
+    public DateOnly Date { get; init; }
+
+    [JsonPropertyName("temperatureC")]
+    public int TemperatureC { get; init; }
+
+    [JsonPropertyName("summary")]
+    public string? Summary { get; init; }
+
+    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+
+    public WeatherForecast(DateOnly date, int temperatureC, string? summary)
+    {
+        Date = date;
+        TemperatureC = temperatureC;
+        Summary = summary;
+    }
 }
