@@ -3,7 +3,9 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-public class ProgramTest : IClassFixture<WebApplicationFactory<Program>>
+
+
+   public class ProgramTest : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly WebApplicationFactory<Program> _factory;
 
@@ -34,17 +36,10 @@ public class ProgramTest : IClassFixture<WebApplicationFactory<Program>>
             Assert.InRange(forecast.TemperatureC, -20, 55);
             Assert.False(string.IsNullOrEmpty(forecast.Summary));
         }
-    }
+    }    
 
     private record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
     {
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
-
-
-}
-
-public partial class Program
-{
-   
 }

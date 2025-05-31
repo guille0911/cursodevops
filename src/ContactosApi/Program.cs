@@ -67,3 +67,5 @@ record WeatherForecast
         Summary = summary;
     }
 }
+
+public partial class Program { }

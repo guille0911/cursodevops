@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiContactos.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8370e1b971b4c984e4d88201c90ee809f5750eea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6179c5bd40f279aacca9487e0171ac424f6a7ce1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiContactos.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiContactos.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
