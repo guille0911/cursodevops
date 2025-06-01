@@ -1,3 +1,4 @@
+# Dockerfile for building and running the ContactosApi application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build 
 WORKDIR /src
 COPY ContactosApi.csproj .
